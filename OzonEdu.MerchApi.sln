@@ -3,17 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonEdu.MerchApi", "OzonEdu.MerchApi\OzonEdu.MerchApi.csproj", "{434F197E-9C23-4FD4-A82E-49EFD1A206C9}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8F64436F-C947-44B6-8197-4CFC54D1CF11}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{BF8D307A-6B26-440E-9B50-E87C732D0DA0}"
 	ProjectSection(SolutionItems) = preProject
-		..\.gitignore = ..\.gitignore
-		..\readme.md = ..\readme.md
+		src\OzonEdu.MerchApi\.dockerignore = src\OzonEdu.MerchApi\.dockerignore
+		.gitignore = .gitignore
+		src\OzonEdu.MerchApi\Dockerfile = src\OzonEdu.MerchApi\Dockerfile
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E77BAC64-F08B-4536-B54F-38B3FB1B6526}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchApi", "src\OzonEdu.MerchApi\OzonEdu.MerchApi.csproj", "{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{B8433129-2B14-4D65-BD81-A6C7AE415921}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,16 +28,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{434F197E-9C23-4FD4-A82E-49EFD1A206C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{434F197E-9C23-4FD4-A82E-49EFD1A206C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{434F197E-9C23-4FD4-A82E-49EFD1A206C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{434F197E-9C23-4FD4-A82E-49EFD1A206C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{434F197E-9C23-4FD4-A82E-49EFD1A206C9} = {8F64436F-C947-44B6-8197-4CFC54D1CF11}
+		{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525} = {8F64436F-C947-44B6-8197-4CFC54D1CF11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5444D2B6-17B5-4535-9E41-404186161FF1}
