@@ -6,16 +6,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["./src/OzonEdu.MerchApi/OzonEdu.MerchApi.csproj", "./OzonEdu.MerchApi/"]
-RUN dotnet restore "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj"
+COPY ["./src/OzonEdu.MerchService/OzonEdu.MerchService.csproj", "./OzonEdu.MerchService/"]
+RUN dotnet restore "./OzonEdu.MerchService/OzonEdu.MerchService.csproj"
 COPY ./src .
 WORKDIR "/src"
-RUN dotnet build "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj" -c Release -o /app/build
+RUN dotnet build "./OzonEdu.MerchService/OzonEdu.MerchService.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./OzonEdu.MerchService/OzonEdu.MerchService.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "OzonEdu.MerchApi.dll"]
+ENTRYPOINT ["dotnet", "OzonEdu.MerchService.dll"]
