@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["./scr/OzonEdu.MerchApi/OzonEdu.MerchApi.csproj", "./OzonEdu.MerchApi/"]
+COPY ["./src/OzonEdu.MerchApi/OzonEdu.MerchApi.csproj", "./OzonEdu.MerchApi/"]
 RUN dotnet restore "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj"
 COPY ./src .
 WORKDIR "./src"

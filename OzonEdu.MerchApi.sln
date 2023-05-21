@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{BF8D30
 	ProjectSection(SolutionItems) = preProject
 		src\OzonEdu.MerchApi\.dockerignore = src\OzonEdu.MerchApi\.dockerignore
 		.gitignore = .gitignore
-		src\OzonEdu.MerchApi\Dockerfile = src\OzonEdu.MerchApi\Dockerfile
+		Dockerfile = Dockerfile
 		readme.md = readme.md
 	EndProjectSection
 EndProject
