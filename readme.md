@@ -1,4 +1,4 @@
-﻿# Stock Api
+﻿# Merch Api
 
 **сервис** 
 
