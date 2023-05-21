@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["./src/OzonEdu.MerchApi/OzonEdu.MerchApi.csproj", "./OzonEdu.MerchApi/"]
 RUN dotnet restore "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj"
 COPY ./src .
-WORKDIR "./src"
+WORKDIR "/src"
 RUN dotnet build "./OzonEdu.MerchApi/OzonEdu.MerchApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
