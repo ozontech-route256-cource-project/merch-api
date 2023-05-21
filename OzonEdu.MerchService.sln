@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{BF8D30
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E77BAC64-F08B-4536-B54F-38B3FB1B6526}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchApi", "src\OzonEdu.MerchApi\OzonEdu.MerchApi.csproj", "{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonEdu.MerchService", "src\OzonEdu.MerchService\OzonEdu.MerchService.csproj", "{1B8B54CB-00B6-4D29-8FF5-A8A1DA55F525}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{B8433129-2B14-4D65-BD81-A6C7AE415921}"
 	ProjectSection(SolutionItems) = preProject

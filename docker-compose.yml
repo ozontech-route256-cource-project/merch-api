@@ -3,6 +3,7 @@ version: '3.9'
 services:
     merchandise_service:
         build: .
+        container_name: merch-service
         ports:
             - "8000:80"
         depends_on:
@@ -12,17 +13,21 @@ services:
             - stock-api
     supply-service:
         image: "ghcr.io/ozontech-route256-cource-project/supply-service:main"
+        container_name: supply-service
         ports:
             - "8001:80"
     emailing-service:
         image: "ghcr.io/ozontech-route256-cource-project/emailing-service:main"
+        container_name: emailing-service
         ports:
             - "8002:80"
     employees-service:
         image: "ghcr.io/ozontech-route256-cource-project/employees-service:main"
+        container_name: employees-service
         ports:
             - "8003:80"
     stock-api:
         image: "ghcr.io/ozontech-route256-cource-project/stock-api:main"
+        container_name: stock-api
         ports:
             - "8004:80"
